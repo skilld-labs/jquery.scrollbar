@@ -164,6 +164,8 @@
             if ((browser.mobile && o.ignoreMobile)
                 || (browser.overlay && o.ignoreOverlay)
                 || (browser.macosx && !browser.webkit) // still required to ignore nonWebKit browsers on Mac
+                || (browser.firefox)
+                || (browser.msie)
                 ) {
                 if ($.isFunction(o.onFallback)) {
                     o.onFallback.apply(this, [c]);
